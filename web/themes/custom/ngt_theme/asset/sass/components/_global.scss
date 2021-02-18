@@ -6,7 +6,9 @@ $sombra: 0 3px 6px rgba(0, 0, 0, 0.16);
 $azul: #3e54d3;
 $turqui: #0B2152;
 $amarillo: #FFA41B;
-$aqua: #15CDCA;
+$aqua: #FFA438;
+$cyan: #00A8CC;
+//$aqua: #15CDCA;
 // FIN VARIABLES ----------------------------------------
 *{
     font: {
@@ -26,6 +28,8 @@ a{
 }
 fieldset {
     border: none;
+    margin: 0px;
+    padding: 0px; 
 }
 button{
     background-color: transparent;
@@ -113,7 +117,7 @@ ul.nav-step{
         width: 8px;
         height: 8px;
         border-radius: 4px;
-        background: $azul;
+        background: $aqua;
         -webkit-transition: all .15s linear;
         transition: all .15s linear;
         &.active{

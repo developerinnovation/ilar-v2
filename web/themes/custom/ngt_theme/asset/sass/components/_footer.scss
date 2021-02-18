@@ -63,7 +63,7 @@ footer{
                     font: {
                         size: 13px;
                     }
-                    color: #fff;
+                    color: #000839;
                     @media only screen and ($desktop){
                     border-radius: 5px;
                     padding: 10px 8px;
@@ -87,13 +87,14 @@ footer{
             }
         img{
             @media only screen and ($desktop){
-            width: 200px;    
+            width: 200px;  
+            margin: 0 auto;  
             }
             &:first-child{
                 @media only screen and ($desktop){
-                margin-right: 20px;
-                padding-right: 20px;
-                border-right: 1px solid #ccc;    
+                // margin-right: 20px;
+                // padding-right: 20px;
+                // border-right: 1px solid #ccc;    
                 }
                 
             }
@@ -116,10 +117,17 @@ footer{
         }
         nav{
             margin: 40px 0;
+            @media only screen and ($desktop){
+                display: flex;
+            }
+            
             li{
                 list-style: none;
                 text-align: center;
                 margin: 0 0 15px;
+                    @media only screen and ($desktop){
+                    width: 100%;
+                    }
                 a{
                     font: {
                         family: 'Asap', sans-serif;
@@ -249,7 +257,7 @@ footer{
                 }
             }
             &.active{
-                border-bottom: 4px solid $azul;
+                border-bottom: 4px solid $cyan;
             }
         }
     }
