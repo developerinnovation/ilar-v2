@@ -754,7 +754,7 @@
             padding: 20px 30px;
             justify-content: space-between;
             .preview a, .next a{
-                background: #0b2152;
+                background: $cyan;
                 padding: 5px 15px 5px 32px;
                 font-size: 12px;
                 color: #fff;
@@ -909,7 +909,7 @@
                             width: 35px;
                             height: 5px;
                             border-radius: 4px;
-                            background: #3e54d3;
+                            background: $aqua;
 
                         }
                     }
@@ -954,12 +954,12 @@
                                 margin: 25px 15px 0 0;
                                 display: inline-table;
                                 border: 0;
-                                background: #15cdca;
+                                background: $aqua;
                                 height: 34px;
                                 padding: 13px 20px;
                                 border-radius: 20px;
                                 font-size: 13px;
-                                color: #fff;
+                                color: $turqui;
                         }
                     }
 
@@ -1309,7 +1309,7 @@
                     width: 35px;
                     height: 5px;
                     border-radius: 4px;
-                    background: #3e54d3;
+                    background: $aqua;
                 }
                 span{
                     font-size: 16px;
@@ -1355,12 +1355,12 @@
                     margin: 15px 0;
                     width: 134px;
                     border: 0;
-                    background: #15cdca;
+                    background: $aqua;
                     height: 34px;
                     padding: 0;
                     border-radius: 20px;
                     font-size: 13px;
-                    color: #fff;
+                    color: $turqui;
                 }
                 .return{
                     background: #0b2152;
