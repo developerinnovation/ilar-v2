@@ -98,7 +98,7 @@ class NodeLeftLessonBlockClass {
                     'height' => $node->get('field_foto_portada')->getValue()[0]['height'],
                 ],
                 'urlCourse' =>\Drupal::service('path.alias_manager')->getAliasByPath('/node/'. $courseId),
-                'video' => isset($node->get('field_url_video')->getValue()[0]) ? $node->get('field_url_video')->getValue()[0]['uri'] : '',
+                'video' => isset($node->get('field_url_video')->getValue()[0]) ? $node->get('field_url_video')->getValue()[0]['uri'] : null,
             ];
             array_push($lessons,$lesson);
         }

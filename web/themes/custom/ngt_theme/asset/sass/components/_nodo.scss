@@ -448,7 +448,7 @@
                                 // height: auto;
                             }
                         }
-                        &:before{
+                        &.play:before{
                             content: '';
                             display: block;
                             width: 36px;
@@ -462,7 +462,7 @@
                             left: 0;
                             margin: auto;
                         }
-                        &:after{
+                        &.play:after{
                             content: '';
                             width: 0;
                             height: 0;
