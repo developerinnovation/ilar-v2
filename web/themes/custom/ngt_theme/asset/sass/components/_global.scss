@@ -299,12 +299,12 @@ p.error-message-input {
             position: absolute;
             right: -15px;
             top: -15px;
-            background-color: #15cdca;
+            background-color: $aqua;
             padding: 4px 10px;
             width: 30px;
             font-size: larger;
             height: 30px;
-            color: #fff;
+            color: $turqui;
             border-radius: 100px;
             cursor: pointer;
             &:hover{
