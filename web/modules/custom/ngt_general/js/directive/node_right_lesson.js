@@ -26,7 +26,7 @@ function ngNodeRightLesson($http){
             }, 
             {
                 id: 3,
-                name: 'Comunidad',
+                name: 'Foro de intercambio',
             }
         ];
         scope.tab = 'contentMain';
