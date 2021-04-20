@@ -13,7 +13,7 @@
         
 
         // node curso cover
-        $( "picture.cover-video" ).click(function() {
+        $( "picture.cover-video.play" ).click(function() {
            $(this).removeClass('active');
            var vid = document.getElementById('presentation');
            vid.play();
