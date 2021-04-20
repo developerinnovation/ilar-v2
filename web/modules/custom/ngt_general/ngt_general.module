@@ -93,6 +93,7 @@ function ngt_general_preprocess_html(&$variables){
   $activate_img_logo_second = $config->get('general_settings')['activate_img_logo_second'];
 
   $script_external = $config->get('script_settings')['external'];
+  $general_txt_footer  = $config->get('other_settings')['txt_footer'];
 
   $variables['logo_general_url'] = $logo_general_url;
   $variables['logo_mobile_url'] = $logo_mobile_url;
@@ -100,6 +101,7 @@ function ngt_general_preprocess_html(&$variables){
   $variables['logo_design_url'] = $logo_design_url;
   $variables['activate_img_logo_second'] = $activate_img_logo_second;
   $variables['script_external'] = $script_external;
+  $variables['general_txt_footer'] = $general_txt_footer;
 }
 
 /**
