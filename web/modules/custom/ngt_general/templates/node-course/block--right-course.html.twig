@@ -77,18 +77,18 @@
                                         </li>
                                     {% endfor %}
                                 </ul>
-                                {% if module.quiz is not null %}
-                                    <div class="evaluation">
-                                        <ul>
-                                            <li class="item class">
-                                                <i class="no-login icon evaluation"></i>
-                                                <a href="{{ module.quiz[0].url }}" class="link">
-                                                    <h4>Evaluación</h4>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                {% endif %}
+                            {% endif %}
+                            {% if module.quiz is not null %}
+                                <div class="evaluation">
+                                    <ul>
+                                        <li class="item class">
+                                            <i class="no-login icon evaluation"></i>
+                                            <a href="{{ module.quiz[0].url }}" class="link">
+                                                <h4>Evaluación</h4>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
                             {% endif %}
                         </div>
                     {% endfor %}
