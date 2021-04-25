@@ -769,8 +769,8 @@ $databases['default']['default'] = array (
 $settings['config_sync_directory'] = 'sites/default/files/config_inqd3tLA7XNFl4FuUioCWDqbyTb2oFtwVKmnDqmJaXWPK_Q0M-Zn2VECvAk_R9O1Tb5egJWenA/sync';
 $settings['file_private_path'] = '/sites/default/privateFile';
 
-$settings['s3fs.access_key'] = 'AKIAWEUZYSW25X2CNEUS';
-$settings['s3fs.secret_key'] = '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';
+$settings['s3fs.access_key'] = '';
+$settings['s3fs.secret_key'] = '';
 $settings['s3fs.upload_as_private'] = TRUE;
 $settings['file_temp_path'] = 'sites/default/files/tmp';
 
