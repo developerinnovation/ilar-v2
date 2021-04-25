@@ -19,9 +19,9 @@ ngt.admin_category_form:
   parent: system.admin_config_system
   weight: 99
 
-ngt.admin_expert_form:
-  title: 'NGT Configuracion expertos'
-  route_name: 'ngt.admin_general_form'
-  description: 'Configuración de expertos en Home'
+ngt.admin_user_expert_form:
+  title: 'NGT Configuracion general de expertos'
+  route_name: 'ngt.admin_user_expert_form'
+  description: 'Configuración general de expertos de la plataforma'
   parent: system.admin_config_system
   weight: 99

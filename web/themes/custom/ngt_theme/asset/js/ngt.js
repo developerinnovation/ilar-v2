@@ -11,6 +11,15 @@
         });
         $("#main.page-front .top .slider").addClass('owl-carousel');
         
+        // owl expertos home
+        $("#main.page-front .bottom .block-ngt-general-expert-home .content #box-slider-profiles .slider-expert .item-main").owlCarousel({
+            nav: false,
+            loop: false,
+            navRewind: false,
+            center: true,
+            items: 1,
+        });
+        $("#main.page-front .bottom .block-ngt-general-expert-home .content #box-slider-profiles .slider-expert .item-main").addClass('owl-carousel');
 
         // node curso cover
         $( "picture.cover-video.play" ).click(function() {

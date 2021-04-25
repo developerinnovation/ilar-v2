@@ -217,6 +217,12 @@ function ngt_general_theme() {
       ],
       'template' => 'node-lesson/block--lesson-modules',
     ],
+    'expert_home' => [
+      'variables' => [
+        'data' => NULL,
+      ],
+      'template' => 'block--expert-home',
+    ],
   ];
 }
 

@@ -143,7 +143,8 @@ class methodGeneral{
             $experto = [
                 'uid' => $user->get('uid')->getValue()[0]['value'],
                 'name_author' => ucfirst($user->get('field_nombre')->getValue()[0]['value'])." ".ucfirst($user->get('field_apellidos')->getValue()[0]['value']),
-                'picture_uri' => $this->load_image($user->get('user_picture')->getValue()[0]['target_id'],'98x98'),
+                'picture_uri' => $this->load_image($user->get('user_picture')->getValue()[0]['target_id'],'200x200'),
+                'picture_uri_200x200' => $this->load_image($user->get('user_picture')->getValue()[0]['target_id'],'medium'),
                 'uri' => \Drupal::service('path.alias_manager')->getAliasByPath('/user/'.$user->get('uid')->getValue()[0]['value']),
                 'profile' => $user->get('field_perfil')->getValue()[0]['value'],
             ];

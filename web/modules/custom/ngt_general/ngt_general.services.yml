@@ -59,4 +59,6 @@ services:
   ngt_general.load_term_parent_id_logic:
     class: Drupal\ngt_general\Services\Rest\LoadTermByParentIdRestLogic
     arguments: []
-    
+  ngt_general.expert_home:
+    class: Drupal\ngt_general\Plugin\Config\Block\ExpertHomeBlockClass
+    arguments: []
