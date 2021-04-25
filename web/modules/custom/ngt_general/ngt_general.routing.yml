@@ -34,3 +34,12 @@ ngt.admin_category_form:
     _permission: 'access administration pages'  
   options:  
     _admin_route: TRUE 
+ngt.admin_expert_form:  
+  path: '/admin/config/ngt/adminsettings/experts/home'  
+  defaults:  
+    _form: '\Drupal\ngt_general\Plugin\Form\ExpertsHomesConfigForm'  
+    _title: 'Configuración de expertos en Home'  
+  requirements:  
+    _permission: 'access administration pages'  
+  options:  
+    _admin_route: TRUE  

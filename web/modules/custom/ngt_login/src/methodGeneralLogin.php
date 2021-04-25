@@ -260,16 +260,90 @@ class methodGeneralLogin{
         }
         return 0;
 
-    
-    // $test_base_url = 'http://www.example.com/cdn';
-    // $this->setSetting('file_public_base_url', $test_base_url);
-    // $filepath = \Drupal::service('file_system')->createFilename('test.txt', '');
-    // $directory_uri = 'public://' . dirname($filepath);
-    // \Drupal::service('file_system')->prepareDirectory($directory_uri, FileSystemInterface::CREATE_DIRECTORY);
-    // $file = $this->createFile($filepath, NULL, 'public');
-    // $url = file_create_url($file->getFileUri());
-    // $expected_url = $test_base_url . '/' . basename($filepath);
-    // $this->assertSame($url, $expected_url);
+    }
 
+    /**
+     * setEditUser
+     *
+     * @param  mixed $params
+     * @return void
+     */
+    public function setEditUser($params){
+        $havePic = ($params['pic'] != '') ? true : false;
+        if($havePic){
+            // $file = $this->preparate_image_profile($params);
+            // $fid = $file->id();
+        }
+
+        $mail = $params['email'];
+        $pass = $params['repeat_pass'];
+
+        $name = $params['name'];
+        $name = explode(' ', $name);
+        $count_name = count($name);
+
+        switch ($count_name) {
+            case 3:
+                    $field_nombre =  $name[0] . ' ' . $name[1];
+                    $field_apellidos =  $name[2];
+                break;
+            
+            case 4:
+                    $field_nombre =  $name[0] . ' ' . $name[1];
+                    $field_apellidos =  $name[2] . ' ' . $name[3];
+                break;
+            default:
+                    $field_nombre =  $name[0];
+                    $field_apellidos =  $name[1];
+                break;
+        }
+
+
+        $field_ubicacion_geografica =  $params['countrySelect'];
+        $field_profesion =  $params['professionSelect'];
+        $field_fecha_nacimiento =  $params['date'];
+
+        $language = \Drupal::languageManager()->getCurrentLanguage()->getId();
+        $user = \Drupal\user\Entity\User::create();
+
+        $user->setPassword($pass);
+        $user->enforceIsNew();
+        $user->setEmail($mail);
+        $user->setUsername($mail);
+      
+        $user->set('field_ubicacion_geografica', $field_ubicacion_geografica);
+        $user->set('field_profesion', $field_profesion);
+        
+        if($field_nombre != ''){
+            $user->set('field_nombre', $field_nombre);
+        }
+        
+        if($field_apellidos != ''){
+            $user->set('field_apellidos', $field_apellidos);
+        }
+
+        if($field_fecha_nacimiento != ''){
+            $user->set('field_fecha_nacimiento', $field_fecha_nacimiento);
+        }
+        
+        
+
+        if($havePic){
+            if($fid != 0){
+                $user->set('user_picture', $fid);
+            }
+        }        
+        $user->save();
+
+        $tokens = [
+            'email' => $mail,
+        ];
+        $template = 'notification_edit_user';
+        \Drupal::service('ngt.send')->send_notification($tokens, $template, $user);
+
+        return [
+            'status' => '200',
+            'data' => $user,
+        ];
     }
 }

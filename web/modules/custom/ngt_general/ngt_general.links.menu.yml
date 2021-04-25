@@ -18,3 +18,10 @@ ngt.admin_category_form:
   description: 'Configuración de categorías mostradas en home'
   parent: system.admin_config_system
   weight: 99
+
+ngt.admin_expert_form:
+  title: 'NGT Configuracion expertos'
+  route_name: 'ngt.admin_general_form'
+  description: 'Configuración de expertos en Home'
+  parent: system.admin_config_system
+  weight: 99

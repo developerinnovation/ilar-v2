@@ -25,3 +25,11 @@ ngt_login.register_user:
   requirements:
     _access: 'TRUE'
     _role: 'anonymous'
+
+ngt_login.edit_user:
+  path: 'user/update'
+  defaults:
+    _controller: '\Drupal\ngt_login\Controller\LoginController::EditUser'
+    _title: 'Edición de usuario'
+  requirements:
+    _permission: 'update_user'
