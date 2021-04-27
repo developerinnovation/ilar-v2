@@ -9,10 +9,14 @@ body{
             .left{
                 .menu{
                     nav{
+                        display: flex;
                         li{
                             list-style: none;
+                            margin-right: 15px;
                             a{
                                color: #fff; 
+                               text-transform: uppercase;
+                               font-family: "Montserrat",sans-serif;
                             }
                             
 
@@ -35,7 +39,8 @@ body{
                 }
                 .login{
                     .link-sign-in{
-                      margin-right: 20px;  
+                      margin-right: 20px;
+                      font-family: "Montserrat",sans-serif; 
                     }
                     
                 }
@@ -134,9 +139,9 @@ body{
                                 border-radius: 30px;
                                 background: $aqua;
                                 font: {
-                                    family: 'Asap', sans-serif;
+                                    family: "Montserrat",sans-serif; 
                                     size: 14px;
-                                    weight: 600;
+                                    weight: 500;
                                 }
                                 line-height: 45px;
                                 color: #000839;
@@ -406,6 +411,106 @@ body{
                         }
                         color: #000839;
                     }
+                }
+            }
+
+            #box-slider-profiles{
+                max-width: 1000px;
+                text-align: center;
+                margin:0 auto;
+                h4{
+                    font-size: 21px;
+                    text-align: center;
+                    text-transform: uppercase;
+                    letter-spacing: .06em;
+                    color: #0b2152;
+                    margin: 100px 0 20px;
+                }
+                p{
+                    color: #747474;
+
+                }
+                button{
+                        border: 0;
+                        background: #ffa438;
+                        font-size: 15px;
+                        color: #fff;
+                        -webkit-appearance: none;
+                        border-radius: 15px;
+                        margin-bottom: 100px;
+                        padding: 10px 25px;
+                    
+                    a{
+                        color: #000839;
+                        height: 28px;
+                        padding: 0;
+                        line-height: 0px;
+                        
+                    }
+                }
+                
+                .slider-expert{
+                    .owl-stage{
+                        padding-left: 40px;
+                        @media only screen and ($desktop){
+                            padding-left: inherit;
+                        }
+                        .owl-item{
+                            margin: auto 8px;
+                            @media only screen and ($desktop){
+                                margin: auto 0px;
+                            }
+                        }
+                        @media only screen and ($desktop){
+                            display: -webkit-inline-box;
+                        }
+                        
+                    }
+                    .item-main{
+                        overflow: hidden;
+                        padding-left: 5px;
+                        padding-right: 5px;
+                        max-width: 1000px;
+
+                        .item-sd{
+                            border-radius: 6px;
+                            -webkit-box-shadow: 0 3px 6px rgb(0 0 0 / 16%);
+                            box-shadow: 0 3px 6px rgb(0 0 0 / 16%);
+                            margin: 100px auto 0;
+                            margin-bottom: 20px;
+
+                            @media only screen and ($desktop){
+                            width: 80%;
+                             height: 370px;
+                            }
+
+                            .text{
+                                padding: 25px;
+                                h2{
+                                    color: $turqui;
+                                    font-weight: 600;
+                                    font-size: 21px;
+                                }
+                                p{
+                                    color: #747474;
+                                    font-weight: bold;
+                                    line-height: 24px;
+                                }
+                            }
+
+                            img{
+                                width: 120px;
+                                height: 120px;
+                                border: 7px solid $turqui;
+                                border-radius: 50%;
+                                object-fit: cover;
+                                margin: 0 auto;
+                                margin-top: -50px;
+                                display: initial;
+                            }
+                        }
+                    }
+                    
                 }
             }
         }

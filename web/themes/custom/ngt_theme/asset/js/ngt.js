@@ -18,6 +18,18 @@
             navRewind: false,
             center: true,
             items: 1,
+            stagePadding: 50,
+            responsive: {
+                768: {
+                    items: 1,
+                    stagePadding: 0
+                },
+                1180: {
+                    items: 3,
+                    center: false,
+                    stagePadding: 0
+                }
+            }
         });
         $("#main.page-front .bottom .block-ngt-general-expert-home .content #box-slider-profiles .slider-expert .item-main").addClass('owl-carousel');
 

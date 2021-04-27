@@ -12,19 +12,20 @@ $cyan: #00A8CC;
 // FIN VARIABLES ----------------------------------------
 *{
     font: {
-        family: 'Roboto', serif;
+        family: 'Roboto Slab', serif;
     }
     box-sizing: border-box;
 }
 h1,h2,h3,h4,h5,h6{
     font: {
-        family: 'Asap', sans-serif;
+        family: 'Montserrat', sans-serif;
         weight: 700;
     }
     margin: 0 0 10px;
 }
 a{
     text-decoration: none;
+
 }
 fieldset {
     border: none;
@@ -36,8 +37,11 @@ button{
     border: none;
     outline: none;
     font: {
-        family: 'Asap', serif;
+        family: 'Montserrat', serif;
         weight: 600;
+    }
+    a{
+        font-family: Montserrat;
     }
 }
 figure{
