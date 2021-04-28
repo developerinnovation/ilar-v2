@@ -1,4 +1,5 @@
 footer{
+    background-color: $turqui;
     .newsetter{
         padding: 50px 30px;
         background: #F7F7F7;
@@ -78,7 +79,16 @@ footer{
     }
     .box{
         padding: 70px 50px;
-        background: $turqui;
+            @media only screen and ($desktop){
+            max-width: 700px;
+            margin: 0 auto; 
+            }
+
+            .description{
+                padding-bottom: 30px;
+                border-bottom: 1px solid #ccc;
+            }
+        
         figure{
             @media only screen and ($desktop){
             display: flex;
@@ -116,9 +126,11 @@ footer{
             }
         }
         nav{
-            margin: 40px 0;
+            margin: 20px auto 40px;
             @media only screen and ($desktop){
                 display: flex;
+                width: 50%;
+                text-align: center;
             }
             
             li{
