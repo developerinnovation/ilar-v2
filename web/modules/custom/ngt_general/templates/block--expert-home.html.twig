@@ -18,11 +18,13 @@
             </div>
         </div>
         
-        <button class="perfil">
-            {% if data.expert.active_link %}
+        
+        {% if data.expert.active_link %}
+            <button class="perfil">
                 <a href="{{ data.expert.profiles_url }}">{{ data.expert.txt_profile }}</a>
-            {% endif %}
+            </button>
+        {% endif %}
                 
-        </button>
+        
     </div>
 {% endif %}
