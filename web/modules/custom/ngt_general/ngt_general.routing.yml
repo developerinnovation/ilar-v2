@@ -43,3 +43,10 @@ ngt.admin_user_expert_form:
     _permission: 'access administration pages'  
   options:  
     _admin_route: TRUE  
+ngt.section_course:
+  path: 'courses/category/{tid}'
+  defaults:
+      _controller: '\Drupal\ngt_general\Controller\GeneralController::section_course'
+      _title: ''
+  requirements:
+      _permission: 'show_course_section'

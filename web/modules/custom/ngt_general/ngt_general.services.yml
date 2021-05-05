@@ -62,3 +62,12 @@ services:
   ngt_general.expert_home:
     class: Drupal\ngt_general\Plugin\Config\Block\ExpertHomeBlockClass
     arguments: []
+  ngt_general.slider_course:
+    class: Drupal\ngt_general\Plugin\Config\Block\SliderMainCourseBlockClass
+    arguments: []
+  ngt_general.course_section:
+    class: Drupal\ngt_general\Plugin\Config\Block\CourseSectionBlockClass
+    arguments: []
+  ngt_general.course_category_section:
+    class: Drupal\ngt_general\Plugin\Config\Block\CourseCategorySectionBlockClass
+    arguments: []

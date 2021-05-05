@@ -53,16 +53,19 @@ function ngt_general_preprocess_html(&$variables){
     $menuActiveNode = 'active';
   }
 
-  // adición angular en page no customizadas
+  //adición angular en page no customizadas
   switch ($routeName) {
     case 'entity.node.canonical':
     case 'comment.reply':
     case 'entity.user.canonical':
     case 'progress.my_progress':
     case 'inscription.render_my_courses':
+    case 'ngt.section_course':
+
         $variables['#attached']['library'][] = 'ngt_general/angular.ngt';
-      break;
   }
+
+  // $variables['#attached']['library'][] = 'ngt_general/angular.ngt';
 
   $variables['showHeaderAndFooter'] = $showHeaderAndFooter;
   $variables['route_name'] = \Drupal::routeMatch()->getRouteName();
@@ -222,6 +225,35 @@ function ngt_general_theme() {
         'data' => NULL,
       ],
       'template' => 'block--expert-home',
+    ],
+    'course_section' => [
+      'variables' => [
+        'data' => NULL,
+        'main_category' => NULL,
+        'category_id' => NULL,
+        'dataAngular' => NULL,
+        'directive'  => NULL,
+        'uuid' => NULL,
+        'config' => NULL,
+        'class' => NULL,
+        'plugin_id' => NULL,
+        'content' => NULL,
+      ],
+      'template' => 'course-section/course-section',
+    ],
+    'course_slider_main_category_section' => [
+      'variables' => [
+        'data' => NULL,
+      ],
+      'template' => 'course-section/block--slider-course-main',
+    ],
+    'course_category_section' => [
+      'variables' => [
+        'data' => NULL,
+        'course' => NULL,
+        'more_courses' => NULL,
+      ],
+      'template' => 'course-section/block--list-course-category',
     ],
   ];
 }

@@ -70,6 +70,16 @@
             
         }
         $('#ngtModal').removeClass('none');
+
+        // slider sección cursos
+        $("#main.page-course .top .destacado .block-ngt-general-slider-course .content .slider").owlCarousel({
+            nav: false,
+            loop: false,
+            navRewind: false,
+            center: true,
+            items: 1,
+        });
+        $("#main.page-course .top .destacado .block-ngt-general-slider-course .content .slider").addClass('owl-carousel');
     
     });
    

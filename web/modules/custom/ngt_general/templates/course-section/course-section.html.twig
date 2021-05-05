@@ -1,0 +1,48 @@
+<!-- ______________________ MAIN _______________________ -->
+<div id="main" class="page-course">
+    <div class="top">
+        <div class="destacado">
+            {{ drupal_block('ngt_general_slider_course') }}
+        </div>
+    </div>
+
+    <div class="center">
+        <div class="left scroll">
+            <div class="category">
+                <h3 class="sub-title">{{ 'Categorías' | t }}</h3>
+                <div class="desktop">
+                    <nav>
+                        <li class="active">
+                            <a href="curso/{{ 'all' }}">{{ 'Últimos cursos' | t }} </a>
+                        </li>
+                        {% for key, category in main_category %}   
+                            {% if category == 1 %}
+                                {% set item = key|split('_') %}
+                                    {% set text %} {{ drupal_field('name', 'taxonomy_term', item[1]) }} {% endset %}
+                                    <li>
+                                        <a href="courses/category/{{ item[1] }}">{{ text|striptags|trim|capitalize }}</a>
+                                    </li>
+                            {% endif %} 
+                        {% endfor %}
+                    </nav>
+                </div>
+                <div class="mobile">
+                    <select name="select">
+                        <option value="value1">{{ 'Últimos cursos' | t }} </option> 
+                        {% for key, category in main_category %}   
+                            {% if category == 1 %}
+                                {% set item = key|split('_') %}
+                                    {% set text %} {{ drupal_field('name', 'taxonomy_term', item[1]) }} {% endset %}
+                                    <option value="{{ item[1] }}">{{ text|striptags|trim|capitalize }}</option>
+                            {% endif %} 
+                        {% endfor %}
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            {{ drupal_block('ngt_general_course_category_section', {'category' : category_id }) }}
+        </div>
+    </div>
+</div>
+<!-- /#main -->
