@@ -80,7 +80,6 @@
             items: 1,
         });
         $("#main.page-course .top .destacado .block-ngt-general-slider-course .content .slider").addClass('owl-carousel');
-    
     });
    
 })(jQuery);
