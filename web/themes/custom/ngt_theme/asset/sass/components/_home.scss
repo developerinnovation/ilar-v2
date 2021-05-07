@@ -57,7 +57,7 @@ body{
 }
 
 #main{
-    &.page-front{
+    &.page-front,{
         .save{
             background-position: -152px -1px;
         }
@@ -330,6 +330,9 @@ body{
             .select{
                 margin: 0 0 40px;
                 .mobile{
+                    @media only screen and ($desktop){
+                        display: none;
+                    }
                     select{
                         // -webkit-appearance: none;
                         font: {
@@ -363,6 +366,33 @@ body{
                 }
                 .desktop{
                     display: none;
+                    @media only screen and ($desktop){
+                        display: block;
+                        padding: 30px 0 0;
+                    }
+
+                    nav{
+                        display: flex;
+                        justify-content: center;
+                        list-style: none;
+
+                        li{
+                                padding: 0 10px;
+                                cursor: pointer;
+                                font-family: "Montserrat",sans-serif;
+                                color: #535353;
+
+                            &.active{
+                                color: #0a2152;
+                                border-bottom: 3px solid #0a2152;
+                                padding-bottom: 5px;
+                                display: inline-block;
+                                a{
+                                    color: $turqui;
+                                }
+                            }
+                        }
+                    }
                 }
             }
             .course{
