@@ -73,7 +73,7 @@ class SliderMainCourseBlockClass {
             $content = [
                 'nid' => $node->get('nid')->getValue()[0]['value'],
                 'title' => $node->get('title')->getValue()[0]['value'],
-                'body' => $node->get('body')->getValue()[0]['value'],
+                'body' => $node->get('field_resumen')->getValue()[0]['value'],
                 'enlace' => [
                     'text' => 'Ver curso',
                     'uri' => \Drupal::service('path.alias_manager')->getAliasByPath('/node/'. $node->get('nid')->getValue()[0]['value']),
