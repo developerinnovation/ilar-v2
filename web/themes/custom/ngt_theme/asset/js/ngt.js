@@ -79,10 +79,23 @@
             center: true,
             items: 1,
         });
+        
         $("#main.page-course .top .destacado .block-ngt-general-slider-course .content .slider").addClass('owl-carousel');
         jQuery('.mobile #select-category').change(function(){
             var url = jQuery( ".mobile #select-category option:selected" ).attr('data-url');
             window.location.href = url;
+        });
+
+        $(window).scroll(function (event) {
+            var scroll = $(window).scrollTop();
+            if ($('#main.page-course').length) {
+                if(scroll > 572) {
+                    $("#main.page-course>.top .medio .left").addClass('scroll');
+                }else{
+                    $("#main.page-course>.top .medio .left").removeClass('scroll');
+    
+                }
+            }
         });
     
     });

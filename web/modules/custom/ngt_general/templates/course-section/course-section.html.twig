@@ -7,7 +7,7 @@
     </div>
 
     <div class="medio">
-        <div class="left scroll">
+        <div class="left">
             <div class="category">
                 <h3 class="sub-title">{{ 'Categorías' | t }}</h3>
                 <div class="desktop">
@@ -46,3 +46,14 @@
     </div>
 </div>
 <!-- /#main -->
+<script>
+    jQuery(window).scroll(function (event) {
+        var scroll = jQuery(window).scrollTop();
+        if(scroll > 572) {
+            jQuery("#main.page-course>.top .medio .left").addClass('scroll');
+        }else{
+            jQuery("#main.page-course>.top .medio .left").removeClass('scroll');
+        }
+        console.log(scroll)
+    });
+</script>
