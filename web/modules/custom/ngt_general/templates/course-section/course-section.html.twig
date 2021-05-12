@@ -19,8 +19,8 @@
                             {% if category == 1 %}
                                 {% set item = key|split('_') %}
                                     {% set text %} {{ drupal_field('name', 'taxonomy_term', item[1]) }} {% endset %}
-                                    <li>
-                                        <a href="/courses/category/{{ item[1] }}" class="{% if category_id == item[1] %}{{ 'active'}}{% endif %}">{{ text|striptags|trim|capitalize }}</a>
+                                    <li class="{% if category_id == item[1] %}{{ 'active'}}{% endif %}">
+                                        <a href="/courses/category/{{ item[1] }}">{{ text|striptags|trim|capitalize }}</a>
                                     </li>
                             {% endif %} 
                         {% endfor %}
