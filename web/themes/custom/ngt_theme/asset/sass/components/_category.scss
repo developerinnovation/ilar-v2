@@ -1,7 +1,16 @@
-.page-courses-category-all{
+.page-courses-category-all, .section-courses{
     header{
         figure{
             position: relative;
+            top:3px;
+            margin:0px;
+        }
+        .box{
+            justify-content: center;
+            width: 100%;
+            >div{
+                justify-content: space-between;
+            }
         }
     }
 }
@@ -130,18 +139,15 @@
             }
             
             .scroll{
-                position: relative;
-                width: 100%;
-                top: 0px;
-                @media only screen and ($desktop){
-                    width: 27%;
-                    top: 30px;
-                }
+                position: fixed;
+                top: 60px;
+                z-index: -1;
             }
             .left{
+                padding-top: 60px;
+                width: 20%;
                 .category{
-                        margin: 0 0 40px;
-                        padding: 40px 30px;
+                        padding: 0px 30px;
                         -webkit-box-shadow: 0 3px 6px rgb(0 0 0 / 16%);
                         box-shadow: 0 3px 6px rgb(0 0 0 / 16%);
                         @media only screen and ($desktop){
@@ -217,7 +223,7 @@
                 padding: 0 24px;
                 @media only screen and ($desktop){
                     width: 72%;
-                    padding-top: 70px;
+                    padding-top: 60px;
                 }
                 
 
