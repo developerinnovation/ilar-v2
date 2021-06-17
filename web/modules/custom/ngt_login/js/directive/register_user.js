@@ -263,14 +263,16 @@ function RegisterUserController($scope, $http, $rootScope){
             jQuery('.criteriar-pass.criteriar-2').removeClass('validate');
         }
 
+        /*
         if(characterSpecialContain.test(value)){
             characterSpecialContainCheck = true;
             jQuery('.criteriar-pass.criteriar-3').addClass('validate');
         }else{
             jQuery('.criteriar-pass.criteriar-3').removeClass('validate');
         }
+        */
 
-        if(longMinCheck && characterSpecialContainCheck && uppercaseContainCheck && numberContainCheck) {
+        if(longMinCheck && uppercaseContainCheck && numberContainCheck) {
             $scope.passValidate = true;
         }else{
             $scope.passValidate = false;

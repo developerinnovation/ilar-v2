@@ -259,9 +259,8 @@ class methodGeneralLogin{
             return $file->id();
         }
         return 0;
-
     }
-
+    
     /**
      * setEditUser
      *

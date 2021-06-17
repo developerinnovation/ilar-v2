@@ -8,6 +8,12 @@ namespace Drupal\ngt_login\Controller ;
 use Drupal\Core\Controller\ControllerBase ;
 
 class LoginController extends ControllerBase { 
+        
+    /**
+     * RecoveryPass
+     *
+     * @return void
+     */
     public function RecoveryPass() {
         \Drupal::service('page_cache_kill_switch')->trigger();
         $block_manager = \Drupal::service('plugin.manager.block');
@@ -20,7 +26,12 @@ class LoginController extends ControllerBase {
         $render = $plugin_block->build();
         return $render;
     }
-
+    
+    /**
+     * RegisterUser
+     *
+     * @return void
+     */
     public function RegisterUser() {
         \Drupal::service('page_cache_kill_switch')->trigger();
         $block_manager = \Drupal::service('plugin.manager.block');
@@ -33,7 +44,7 @@ class LoginController extends ControllerBase {
         $render = $plugin_block->build();
         return $render;
     }
-
+    
     /**
      * EditUser
      *

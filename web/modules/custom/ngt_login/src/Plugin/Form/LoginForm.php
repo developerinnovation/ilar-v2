@@ -34,7 +34,6 @@ class LoginForm extends ConfigFormBase {
             'Mínimo o caracteres',
             'Incluir números 0 - 9',
             'Incluir mayúsculas',
-            'Incluir caracter especial'
         ];
 
         $form['#tree'] = true;
