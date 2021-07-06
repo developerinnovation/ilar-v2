@@ -1,5 +1,13 @@
 body{
     header{
+        .fras.description-header{
+            text-align: center;
+            background: #f7f7f7;
+            margin: 0px;
+            padding: 9px;
+            color: #293a80;
+            font-size: 14px;
+        }
         .box{
             @media only screen and ($desktop){
             justify-content: flex-end;

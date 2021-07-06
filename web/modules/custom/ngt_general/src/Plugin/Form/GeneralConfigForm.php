@@ -95,6 +95,29 @@ class GeneralConfigForm extends ConfigFormBase {
             '#description' => t('Logo compañía desarrolladora'),
             '#required' => false
         ]; 
+
+        // text header home
+
+        $form['home_text_header'] = [  
+            '#type' => 'details',
+            '#title' => t('Configuración text header home'),   
+            '#open' => false,  
+        ]; 
+
+        $form['home_text_header']['active_message'] = [  
+            '#type' => 'checkbox',
+            '#title' => t('Activar texto home header '),   
+            '#default_value' => $config->get('home_text_header')['active_message'],   
+            '#description' => t('Permite indicar a la plataforma si debe mostrar el texto en el header del home'),
+        ];
+
+        $form['home_text_header']['txt'] = [  
+            '#type' => 'textarea',  
+            '#title' => 'Texto home header',  
+            '#description' => t('Texto a mostrar en home, en el header'),  
+            '#default_value' => isset($config->get('home_text_header')['txt']) ? $config->get('home_text_header')['txt'] : 'Investigación en Reumatología | Proyecto originado por un subsidio de ILAR (International League of Associations for Rheumatology)',    
+            '#required' => true
+        ]; 
         
 
         // otras config
@@ -215,6 +238,7 @@ class GeneralConfigForm extends ConfigFormBase {
         $this->config('ngt_general.settings')
             ->set('general_settings', $form_state->getValue('general_settings'))  
             ->set('general_terms_conditions', $form_state->getValue('general_terms_conditions'))  
+            ->set('home_text_header', $form_state->getValue('home_text_header'))
             ->set('other_settings', $form_state->getValue('other_settings'))  
             ->set('script_settings', $form_state->getValue('script_settings'))
             ->save();  

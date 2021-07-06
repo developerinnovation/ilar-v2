@@ -98,6 +98,10 @@ function ngt_general_preprocess_html(&$variables){
   $script_external = $config->get('script_settings')['external'];
   $general_txt_footer  = $config->get('other_settings')['txt_footer'];
 
+  $active_home_txt_header  = $config->get('home_text_header')['active_message'];
+  $home_txt_header  = $config->get('home_text_header')['txt'];
+
+
   $variables['logo_general_url'] = $logo_general_url;
   $variables['logo_mobile_url'] = $logo_mobile_url;
   $variables['logo_second_url'] = $logo_second_url;
@@ -105,6 +109,9 @@ function ngt_general_preprocess_html(&$variables){
   $variables['activate_img_logo_second'] = $activate_img_logo_second;
   $variables['script_external'] = $script_external;
   $variables['general_txt_footer'] = $general_txt_footer;
+  $variables['active_home_txt_header'] = $active_home_txt_header;
+  $variables['home_txt_header'] = $home_txt_header;
+
 }
 
 /**
